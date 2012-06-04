@@ -1,0 +1,18 @@
+<%= form_for @friend do |f| %>
+<p>
+ <%= f.label :name, "Nome:" %>
+ <%= f.text_field :name %>
+</p>
+<p>
+ <%= f.label :lat, "Latitude:" %>
+ <%= f.text_field :lat %>
+</p>
+<p>
+ <%= f.label :long, "Longitude:" %>
+ <%= f.text_field :long %>
+</p>
+
+<%= submit_tag(f.object.new_record? ? "Criar" : "Salvar") %> ou 
+<%= link_to('listagem', friends_path) %> ou
+<%= link_to("novo", new_friend_path) %>
+<% end %> 

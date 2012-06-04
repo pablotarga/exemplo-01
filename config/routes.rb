@@ -1,4 +1,7 @@
 Exemplo::Application.routes.draw do
+  get "friend_radar(/:index)", :controller => :friend_radar, :action => :index
+  resources :friends
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +51,7 @@ Exemplo::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'friends#index'
 
   # See how all your routes lay out with "rake routes"
 

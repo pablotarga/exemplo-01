@@ -1,0 +1,16 @@
+<h1>Friend Radar</h1>
+
+<%= form_tag({:action => "index"}, {:method => :get}) do %>
+  <p>
+    lat: <%= text_field_tag "lat", params[:lat] %>
+    long: <%= text_field_tag "long", params[:long] %>
+    limite: <%= text_field_tag "limit", params[:limit] %>
+    <%= submit_tag "Buscar" %>
+  </p>
+  
+<% end %>
+
+<div id="friend_list">
+  <%= render :partial => "friend_list" %>  
+</div>
+

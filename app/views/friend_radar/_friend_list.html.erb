@@ -1,0 +1,20 @@
+
+<table border="0" cellspacing="5" cellpadding="5">
+  <tr>
+    <th>Nome</th>
+    <th>Lat</th>
+    <th>Long</th>
+    <th>Distância</th>
+  </tr>
+
+  <% @friends.each do |e| %>
+    <tr>
+      <td><%= e.name %></td>
+      <td><%= e.lat %></td>
+      <td><%= e.long %></td>
+      <td><%= e.distance.to_f.round(2) %></td>
+    </tr>
+  <% end %>
+  
+</table>
+
