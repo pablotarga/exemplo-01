@@ -1,25 +1,14 @@
-# SQLite version 3.x
-#   gem install sqlite3
+# PostgreSQL versions 7.4 - 8.1
 #
-#   Ensure the SQLite 3 gem is defined in your Gemfile
-#   gem 'sqlite3'
-development:
-  adapter: sqlite3
-  database: db/development.sqlite3
-  pool: 5
-  timeout: 5000
-
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
-test:
-  adapter: sqlite3
-  database: db/test.sqlite3
-  pool: 5
-  timeout: 5000
-
-production:
-  adapter: sqlite3
-  database: db/production.sqlite3
-  pool: 5
-  timeout: 5000
+# Get the C bindings:
+#   gem install postgres
+# or use the pure-Ruby bindings on Windows:
+#   gem install postgres-pr
+development: &development
+  adapter: postgresql
+  database: exemplo01
+  username: exemplo_user  
+  password: 123mudar
+  pool: 20
+  wait_timeout: 300
+  port: 5432
